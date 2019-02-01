@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web - больше чем код!</title>
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="techBody">
+
+<div class="before-code hide">
+    <b style="color: #9acce5">&lt;</b><b style="color: #f07178">main</b> <b style="color: #edbe66">class=</b><b style="color: #b8db86">"HyperText Markup Language"</b><b style="color: #9acce5">&gt;</b>
+</div>
+
+<div class="after-code hide">
+    <b style="color: #9acce5">&lt;/</b><b style="color: #f07178">main</b><b style="color: #9acce5">&gt;</b>
+</div>
+
+<header class="mainHeader">
+    <h2 onclick="location.href = 'http://localhost:8888/html-page/tech'">Web<b>dev</b></h2>
+    <nav class="mainHeaderNav">
+        <a id="html" class="activeHtml" data-link="/html-page/tech" title="Html">HTML</a>
+        <a id="css" class="" data-link="/css-page/tech-css" title="Css">CSS</a>
+        <a id="js" class="" data-link="/js-page/tech-js" title="JavaScript">JS</a>
+    </nav>
+</header>
+
+<section class="mainContent maintenance hide">
+    <h1>Средний уровень HTML</h1>
+    <div class="entry">
+        <b>Содержание</b>
+        <ul>
+            <li><a href="#entry">Вступление</a></li>
+            <li><a href="#block-element">Блочные элементы</a></li>
+            <li><a href="#link">Ссылки</a></li>
+            <li><a href="#parag">Текст</a></li>
+            <li><a href="#ulli">Списки</a></li>
+            <li><a href="#hhh">Заголовки</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2 id="entry">Вступление</h2>
+        <p>
+            Вот мы и добрались до продолжения! Средний уровень, это тебе уже не хухры мухры, а <b>Код!!!</b>. Только код и чуток теории.<br><br>
+            Тут мы рассмотрим такие теги как: <span>&lt;div&gt;</span>, <span>&lt;a&gt;</span>, <span>&lt;p&gt;</span>, теги списков, теги заголовков, <span>&lt;b&gt;</span>, <span>&lt;br&gt;</span>.<br><br>
+            Чуть больше мы рассмотрим уже на уровне выше.
+        </p>
+        <hr>
+        <!-- next -->
+        <h2 id="block-element">Блочные элементы</h2>
+        <p>
+            В данном отделе мы рассмотрим блочный элемент <span>&lt;div&gt;</span>. На самом деле их достаточно много, но для нашего уровня мы пока что не лезем туда, куда нам еще рано!<br><br>
+            <span>&lt;div&gt;</span> создан как правило для изменения внешнего вида фрагмента, который заключен внутри самого <span>&lt;div&gt;</span>. Он требует закрытия. Принимает атрибуты <span>class</span>, <span>id</span>, <span>style</span>.
+        </p>
+        <blockquote>
+            Так же:<br><br>
+            <ul>
+                <li><span>&lt;align&gt;</span> - выравнивание содержимого внутри <span>&lt;div&gt;</span>,</li>
+                <li><span>&lt;title&gt;</span> - добавляет всплывающую подсказку к содержимому</li>
+            </ul>
+        </blockquote>
+        <p>
+            Теперь немного кода, чтобы закрепить то, что вы сейчас прочитали. Сначала вспомним стартовую разметку страницы, а конкретно, как она должна выглядеть, чтобы начать
+            становиться профессионалом в своем деле. <br><br>Код:
+        </p>
+        <div class="code">
+            &lt;!doctype html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Name&lt;/title&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Место для нашего кода --&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+        <p>
+            <span>&lt;!-- Место для нашего кода --&gt;</span> - закомментированный код. Он не отображается никаким образом у нас на странице. А конкретно
+            чтобы закомментировать текст нужно обернуть его в <span>&lt;!--</span> и <span>--&gt;</span>.<br><br>
+            Давайте напишем наш первый блочный элемент, присвоим ему класс, а так же напишем туда текст <b>рыбу</b>!<br><br>Код:
+        </p>
+        <div class="code">
+            &lt;!doctype html&gt;<br>
+            &lt;html&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Name&lt;/title&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="test-class"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+        <hr>
+
+        <h2 id="link">Ссылки</h2>
+        <p>
+            Ссылки в HTML один из самых важных элементов на странице. Ссылку можно обозначить тегом <span>&lt;a&gt;</span>. Примерный вид ссылки:<br><br><span>&lt;a href="https://link.ru"&gt;Название ссылки&lt;/a&gt;</span><br><br>
+        </p>
+        <blockquote>
+            Тег <span>&lt;a&gt;</span> имеет множество атрибутов, мы рассмотрим только основные, которые встречаются в 90% случаях!
+        </blockquote>
+        <blockquote>
+            <b>Важно!</b><br><br>
+            Тег <span>&lt;a&gt;</span> может задать как ссылку, которая перенаправляет на ресурс, но также может послужить якорем.
+        </blockquote>
+        <p>И так, из самых важных атрибутов я выделю только два, это: <span>href</span> и <span>name</span></p>
+        <blockquote>
+            <ul>
+                <li><span>&lt;a href="https://link.ru"&gt;Название ссылки&lt;/a&gt;</span> - в двойных апострофах пишется полна ссылка на интернет ресурс. href задает переход по ссылке при клике на элемент.</li>
+                <li><span>&lt;a name="идентификатор"&gt;Название ссылки&lt;/a&gt;</span> - устанавливает имя якоря внутри документа.</li>
+            </ul>
+        </blockquote>
+        <hr>
+
+        <h2 id="parag">Текст</h2>
+        <p>
+            Текст - самый важный элемент на странице. Любая информация в печатном виде - это текст, я думаю это всем известно...<br>
+            Чтобы писать текст и отображать его на странице, не обязательно использовать какие-то конкретные теги, можно написать его в том же <span>&lt;div&gt;</span>, но
+            среди верстальщиков есть договоренность, чтобы текст писался в своих тегах, это: <span>&lt;p&gt;</span>, <span>&lt;span&gt;</span>, <span>&lt;label&gt;</span>, <span>&lt;b&gt;</span> и т.д.<br><br>
+
+            Так же для написания текста можно использовать <b>заголовки</b>, но это отдельный раздел, до него мы скоро дойдем!
+        </p>
+
+        <h2>Что дальше?</h2>
+        <div class="footer-content">
+            <a onclick="back()">Вернуться назад</a>
+            <a onclick="next('/')">Читать далее</a>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="../../js/js.js"></script>
+</body>
+</html>
