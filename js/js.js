@@ -12,16 +12,13 @@ function Main(method) {
             show: (item) => {item.classList.remove('hide')},
             hide: (item, method) => {
                 if (method === 'right') {
-                    item.classList.add('hide');
-                    item.classList.add('right');
+                    return item.className += ' hide right';
                 }
                 if (method === 'left') {
-                    item.classList.add('hide');
-                    item.classList.add('left');
+                    return item.className += ' hide left';
                 }
                 if (method === 'fadeOut') {
-                    item.classList.add('hide');
-                    item.classList.add('fadeOut');
+                    return item.className += ' hide fadeOut';
                 }
             }
         }
