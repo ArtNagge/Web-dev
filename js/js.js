@@ -39,11 +39,10 @@ if (document.body.className === 'mainBody') {
         body        = document.querySelector('body');
 
     document.addEventListener('mousemove', function (evt) {
-        let xD = parseInt(evt.clientX / 100);
-        let yD = parseInt(evt.clientY / 100);
-
-        let xS = parseInt(evt.clientX / 70);
-        let yS = parseInt(evt.clientY / 70);
+        let xD = parseInt(evt.clientX / 100),
+            yD = parseInt(evt.clientY / 100),
+            xS = parseInt(evt.clientX / 70),
+            yS = parseInt(evt.clientY / 70);
 
         webDev.style.transform = 'translate('+xD+'px, '+yD+'px)';
         thisSience.style.transform = 'translate('+xS+'px, '+yS+'px)';
