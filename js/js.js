@@ -85,3 +85,6 @@ linkAnchor.forEach(function(item) {
         }, scrollTime / framesCount);
     });
 });
+
+
+// Люблю тебя <3
