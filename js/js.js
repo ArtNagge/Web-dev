@@ -6,23 +6,33 @@
 window.beforeCode  = document.querySelector('.before-code');
 window.afterCode   = document.querySelector('.after-code');
 
-let show = (item) => item.classList.remove('hide');
-let hide = (item, method) => {
-    if (method === 'right') {
-        item.classList.add('hide');
-        item.classList.add('right');
+function Main(method) {
+    if (method === 'animate') {
+        return {
+            show: (item) => {item.classList.remove('hide')},
+            hide: (item, method) => {
+                if (method === 'right') {
+                    item.classList.add('hide');
+                    item.classList.add('right');
+                }
+                if (method === 'left') {
+                    item.classList.add('hide');
+                    item.classList.add('left');
+                }
+                if (method === 'fadeOut') {
+                    item.classList.add('hide');
+                    item.classList.add('fadeOut');
+                }
+            }
+        }
     }
-    if (method === 'left') {
-        item.classList.add('hide');
-        item.classList.add('left');
+    if (method === 'funcMethod') {
+        return {
+            back: () => window.history.back(),
+            link: (link) => location.href = link
+        }
     }
-    if (method === 'fadeOut') {
-        item.classList.add('hide');
-        item.classList.add('fadeOut');
-    }
-};
-let back = () => window.history.back();
-let link = (link) => location.href = link;
+}
 
 if (document.body.className === 'mainBody') {
     let mainSection = document.querySelector('.mainSection'),
@@ -46,11 +56,11 @@ if (document.body.className === 'mainBody') {
     btn.addEventListener('click', function (evt) {
         evt.preventDefault();
         setTimeout(function () {
-            hide(beforeCode, 'left');
-            hide(afterCode, 'right');
-            hide(webDev, 'fadeOut');
-            hide(thisSience, 'fadeOut');
-            hide(btn, 'fadeOut');
+            Main('animate').hide(beforeCode, 'left');
+            Main('animate').hide(afterCode, 'right');
+            Main('animate').hide(webDev, 'fadeOut');
+            Main('animate').hide(thisSience, 'fadeOut');
+            Main('animate').hide(btn, 'fadeOut');
         }, 500);
         setTimeout(function () {
             mainSection.innerHTML = '';
@@ -63,9 +73,9 @@ if (document.body.className === 'techBody') {
     let mainContent = document.querySelector('.mainContent');
     document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function () {
-            show(mainContent);
-            show(afterCode);
-            show(beforeCode);
+            Main('animate').show(mainContent);
+            Main('animate').show(afterCode);
+            Main('animate').show(beforeCode);
         }, 300);
     });
 
@@ -74,9 +84,9 @@ if (document.body.className === 'techBody') {
         item.addEventListener('click', function (e) {
             e.preventDefault();
             let getAttr = this.getAttribute('data-link');
-            hide(beforeCode, 'left');
-            hide(afterCode, 'right');
-            hide(mainContent, 'fadeOut');
+            Main('animate').hide(beforeCode, 'left');
+            Main('animate').hide(afterCode, 'right');
+            Main('animate').hide(mainContent, 'fadeOut');
             setTimeout(function () {
                 location = getAttr;
             }, 400)
