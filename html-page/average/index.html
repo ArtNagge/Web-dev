@@ -122,15 +122,51 @@
         <p>
             Текст - самый важный элемент на странице. Любая информация в печатном виде - это текст, я думаю это всем известно...<br>
             Чтобы писать текст и отображать его на странице, не обязательно использовать какие-то конкретные теги, можно написать его в том же <span>&lt;div&gt;</span>, но
-            среди верстальщиков есть договоренность, чтобы текст писался в своих тегах, это: <span>&lt;p&gt;</span>, <span>&lt;span&gt;</span>, <span>&lt;label&gt;</span>, <span>&lt;b&gt;</span> и т.д.<br><br>
+            среди верстальщиков есть договоренность - чтобы текст писался в своих тегах, это: <span>&lt;p&gt;</span>, <span>&lt;span&gt;</span>, <span>&lt;label&gt;</span>, <span>&lt;b&gt;</span> и т.д.<br><br>
 
-            Так же для написания текста можно использовать <b>заголовки</b>, но это отдельный раздел, до него мы скоро дойдем!
+            Так же для написания текста можно использовать <b>заголовки</b>, но это отдельный раздел, до него мы скоро дойдем!<br><br>
+
+            И так. Самый часто используемый тег для создания блока с текстом, это <span>&lt;p&gt;</span>. <span>&lt;p&gt;</span> - параграф.
+            Внутри тега <span>&lt;p&gt;</span> можно так же использовать теги <span>&lt;a&gt;</span>, <span>&lt;span&gt;</span>, <span>&lt;b&gt;</span> и др. Тег <span>&lt;a&gt;</span> мы с вами изучили - это ссылки, но что же такое <span>&lt;b&gt;</span> и <span>&lt;span&gt;</span>.
         </p>
+        <blockquote>
+            <span>&lt;span&gt;</span> предназначен для определения строчных элементов документа. В отличие от блочных элементов, таких как <span>&lt;table&gt;</span>, <span>&lt;p&gt;</span> или <span>&lt;div&gt;</span>, с помощью тега <span>&lt;span&gt;</span> можно выделить часть информации внутри других тегов и установить для нее свой стиль.<br><br>
+            <span>&lt;b&gt;</span> устанавливает жирное начертание шрифта.
+        </blockquote>
+        <p>
+            Давайте разберем следующий код и посмотрим на его результат исполнения:
+        </p>
+        <div class="code">
+            &lt;div class="test-class"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur &lt;b&gt;adipisicing&lt;/b&gt; elit.&lt;/p&gt;<br>
+            &lt;/div&gt;<br>
+        </div>
+        <p>
+            Тут мы можем видеть следующее:<br>
+            Текст <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</b> обернут в тег <span>&lt;p&gt;</span>, а внутри текста фраза <b>adipisicing</b> обернута в тег <span>&lt;b&gt;</span><br>
+            Давайте посмотрим на результат:
+        </p>
+        <div class="code">
+            <p>Lorem ipsum dolor sit amet, consectetur <b>adipisicing</b> elit.</p>
+        </div>
+        <hr>
+
+        <h2 id="ulli">Списки</h2>
+        <p>
+            Списки - это элементы на сайте, которые в основном используют для создания меню сайта или же якоря. <br>
+            Чтобы определить список, нужно заключить его в тег <span>&lt;ul&gt;&lt;/ul&gt;</span>. Он требует закрытия и внутри <span>&lt;ul&gt;</span> задаются элементы списка.
+            Каждый элемент списка оборачивается(обычно) в тег <span>&lt;li&gt;&lt;/li&gt;</span>, Он задает маркированный список, но как правило, маркировку убирают с помощью <b>CSS</b><br><br>
+            Вот теги, в которые оборачивают пункты меню:
+        </p>
+        <blockquote>
+            <span>&lt;li&gt;&lt;/li&gt;</span> - маркированный список<br>
+            <span>&lt;ol&gt;&lt;/ol&gt;</span> - нумернованный список
+        </blockquote>
 
         <h2>Что дальше?</h2>
         <div class="footer-content">
-            <a onclick="back()">Вернуться назад</a>
-            <a onclick="next('/')">Читать далее</a>
+            <a onclick="Main('funcMethod').back()">Вернуться назад</a>
+            <a onclick="Main('funcMethod').next('/')">Читать далее</a>
         </div>
     </div>
 </section>

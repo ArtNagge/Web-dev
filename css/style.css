@@ -312,6 +312,7 @@ a {
 }
 .content p {
     margin-top: 7px;
+    line-height: 27px;
 }
 .content p span {
     background-color: #e4e4e4;
@@ -349,6 +350,7 @@ a {
     box-sizing: border-box;
     margin-top: 10px;
     font-size: 13px;
+    line-height: 25px;
     background-color: #fff8ed;
 }
 .entry ul {
