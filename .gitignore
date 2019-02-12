@@ -1,6 +1,7 @@
 
 *.xml
 *.iml
-.DS_Store
-js/.DS_Store
 css/.DS_Store
+html-page/.DS_Store
+js/.DS_Store
+.DS_Store
